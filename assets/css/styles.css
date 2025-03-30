@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/static/DMSans-Regular.ttf");
+  src:url("../fonts/static/DMSans-Medium.ttf");
+  src:url("../fonts/static/DMSans-MediumItalic.ttf");
+}
+
+:root {
+  --purple-100:hsl(254,88%,90%);
+  --purple-500:hsl(256,67%,59%);
+
+  --yellow-100:hsl(31,66%,93%);
+  --yellos-500:hsl(39,100%,71%);
+
+  --white-main:hsl(0,0%,100%);
+  --black-main:hsl(0,0%,7%);
+
+  --fs-p: 18px;
+}
+
+p {
+  font-family: "DM Sans", Calibri, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+h1,h2,h3 {
+  font-family: "DM Sans",Calibri, Tahoma, sans-serif;
+  font-weight: 500;
+}

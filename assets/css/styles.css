@@ -22,17 +22,15 @@
   --white-main:hsl(0,0%,100%);
   --black-main:hsl(0,0%,7%);
 
-  --fs-p: 18px;
+  --fs-p: 1.5rem;
 }
 
-p {
+p, span {
   font-family: "DM Sans", Calibri, Tahoma, sans-serif;
-  font-weight: 100;
 }
 
 h1,h2,h3 {
   font-family: "DM Sans",Calibri, Tahoma, sans-serif;
-  font-weight: 500;
 }
 
 .main_container {
@@ -40,24 +38,30 @@ h1,h2,h3 {
   border: 3px solid black;
 }
 
-/* First square styles*/
+.main_container div {
+  margin-block-start: 2rem;
+  border-radius: 10px;
+}
+
+/* First container*/
 .main_container >:first-child {
   position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 18rem;
+  min-width: 300px;
+  height: auto;
   padding-block: 2rem;
   background-color: var(--purple-500);
   border: 1px solid blue;
-  border-radius: 10px;
-  font-size: 1.3rem;
   text-align: center;
   color: var(--white-main);
 }
 
 .ai_container h1 {
   padding-inline: 1.5rem;
+  font-size: 3rem;
+  font-weight: 500;
 }
 
 .ai_container h1 span:first-of-type{
@@ -84,5 +88,164 @@ h1,h2,h3 {
   margin-block-start: .5rem;
 }
 
+/* Second container*/
+.manage_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1.5rem;
+}
 
+.manage_container p {
+  margin-block-start: 1rem;
+  font-size: var(--fs-p);
+  font-weight:500;
+  letter-spacing: -.1rem;
+  line-height: 1.2rem;
+}
+
+/*Third container*/
+.maintain_container {
+  display: flex;
+  flex-direction: column;
+  height: 220px;
+  padding-inline-start: 1rem;
+  padding-inline-end: 5rem;
+  padding-block-start: 1rem;
+  justify-content: space-between;
+  background-color: var(--yellow-500);
+  /* Escondemos parte de la imagen según el diseño*/
+  overflow-y: hidden;
+}
+
+.maintain_container p {
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  letter-spacing: -.1rem;
+  font-weight: 500;
+}
+
+.maintain_container figure {
+  /*Position relative para esconder mas la imagen hacía abajo*/
+  position: relative;
+  top: 5px;
+  margin-block-start: 1rem;
+  width: 100%;
+  height: 200px;
+  /*Decisión de diseño*/
+  padding-inline-end: 2rem;
+}
+
+.maintain_container figure img {
+  width: 100%;
+  height: 100%;
+}
+
+/*Fourth container*/
+
+.schedule_social_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  background-color: var(--purple-100);
+}
+
+.schedule_social_container p {
+  font-size: var(--fs-p); 
+  font-weight: 500;
+  letter-spacing: -.1rem;
+}
+
+.schedule_social_container figure {
+  width: 100%;
+  margin-block-start: 1rem;
+}
+
+.schedule_social_container p:last-child {
+  margin-block-start: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-weight: normal;
+  padding-inline:1rem;
+  letter-spacing: .2px;
+}
+
+.grow_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 350px;
+  background-color: var(--purple-500);
+  padding-inline: 4rem;
+}
+
+.grow_container p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--white-main);
+  letter-spacing: -.1rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.percent_container {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 1rem;
+  padding-inline-end: 8rem;
+}
+
+.percent_container span {
+  font-size: 2.8rem;
+  font-weight: 500;
+}
+
+.percent_container figure {
+  width: 150px;
+  margin-block-start: 1rem;
+}
+
+.create_post_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 230px;
+  padding-inline:1.5rem;
+  background-color: var(--yellow-100);
+}
+
+.create_post_container p {
+  font-size: 1.8rem;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.create_post_container p span {
+  color: var(--purple-500);
+  font-style: italic;
+}
+
+.create_post_container figure {
+  width: 170px;
+}
+
+.write_container {
+  padding: 1.5rem;
+  background-color:var(--yellow-500);
+}
+
+.write_container p {
+  font-size:1.8rem;
+  font-size:2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.write_container figure {
+  width: 200px;
+  margin-block-start: 1rem;
+}
 /*Media queries for Grid*/

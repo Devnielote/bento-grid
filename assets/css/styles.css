@@ -23,6 +23,7 @@
   --black-main:hsl(0,0%,7%);
 
   --fs-p: 1.5rem;
+  --mobile-w: 18rem;
 }
 
 p, span {
@@ -33,11 +34,27 @@ h1,h2,h3 {
   font-family: "DM Sans",Calibri, Tahoma, sans-serif;
 }
 
-.main_container {
-  padding: 1rem;
-  border: 3px solid black;
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center
 }
 
+img {
+  width: 100%;
+}
+.main_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1000px;
+  overflow: hidden;
+}
+  
 .main_container div {
   margin-block-start: 2rem;
   border-radius: 10px;
@@ -48,9 +65,8 @@ h1,h2,h3 {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  min-width: 300px;
-  height: auto;
+  justify-content: center;
+  min-width: 18rem;
   padding-block: 2rem;
   background-color: var(--purple-500);
   border: 1px solid blue;
@@ -92,30 +108,28 @@ h1,h2,h3 {
 .manage_container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 1.5rem;
+  background-color: var(--white-main);
+  padding: 1rem;
 }
 
 .manage_container p {
-  margin-block-start: 1rem;
+  margin-block-start: 1.5rem;
   font-size: var(--fs-p);
   font-weight:500;
   letter-spacing: -.1rem;
   line-height: 1.2rem;
+  
 }
 
 /*Third container*/
 .maintain_container {
   display: flex;
   flex-direction: column;
-  height: 220px;
-  padding-inline-start: 1rem;
-  padding-inline-end: 5rem;
-  padding-block-start: 1rem;
-  justify-content: space-between;
   background-color: var(--yellow-500);
   /* Escondemos parte de la imagen según el diseño*/
-  overflow-y: hidden;
+  overflow:clip;
+  padding-block-start: 1rem;
+  padding-inline: 1rem;
 }
 
 .maintain_container p {
@@ -125,20 +139,11 @@ h1,h2,h3 {
   font-weight: 500;
 }
 
-.maintain_container figure {
-  /*Position relative para esconder mas la imagen hacía abajo*/
-  position: relative;
-  top: 5px;
-  margin-block-start: 1rem;
-  width: 100%;
-  height: 200px;
-  /*Decisión de diseño*/
-  padding-inline-end: 2rem;
-}
 
-.maintain_container figure img {
-  width: 100%;
-  height: 100%;
+.maintain_container img {
+  margin-block-start: 1rem;
+  margin-block-end: -30px;
+  width:70%; 
 }
 
 /*Fourth container*/
@@ -172,30 +177,38 @@ h1,h2,h3 {
   padding-inline:1rem;
   letter-spacing: .2px;
 }
-
+/*Fifth container*/
 .grow_container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 350px;
+  align-items: center;
   background-color: var(--purple-500);
-  padding-inline: 4rem;
+  margin-block-end: 1rem;
+  padding: 1.5rem;
+}
+
+.grow_container figure {
+  width: 100%;
+}
+
+.grow_container img {
+  width:80%;
 }
 
 .grow_container p {
   font-size: 1.8rem;
   font-weight: 500;
   color: var(--white-main);
-  letter-spacing: -.1rem;
   line-height: 1.5rem;
   text-align: center;
+  margin-block-start: 2rem;
 }
-
+/*Sixth container*/
 .percent_container {
   display: flex;
   flex-direction: column;
-  padding-inline-start: 1rem;
-  padding-inline-end: 8rem;
+  background-color: var(--white-main);
+  padding: 1rem;
 }
 
 .percent_container span {
@@ -203,8 +216,13 @@ h1,h2,h3 {
   font-weight: 500;
 }
 
-.percent_container figure {
-  width: 150px;
+.percent_container figure{
+  width: 100%;
+  align-items: start;
+}
+
+.percent_container figure img {
+  width: 60%;
   margin-block-start: 1rem;
 }
 
@@ -212,8 +230,7 @@ h1,h2,h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 230px;
-  padding-inline:1.5rem;
+  padding: 2rem;
   background-color: var(--yellow-100);
 }
 
@@ -229,9 +246,14 @@ h1,h2,h3 {
 }
 
 .create_post_container figure {
-  width: 170px;
+  width: 100%;
+  align-items:start;
+  justify-items: center;
+  margin-block-start: 1rem;
 }
-
+.create_post_container figure img {
+  width: 60%;
+}
 .write_container {
   padding: 1.5rem;
   background-color:var(--yellow-500);
@@ -241,11 +263,133 @@ h1,h2,h3 {
   font-size:1.8rem;
   font-size:2rem;
   font-weight: 500;
-  line-height: 1.5rem;
+  line-height: 30px;
 }
 
 .write_container figure {
-  width: 200px;
+  width: 100%;
+  align-items: start;
   margin-block-start: 1rem;
 }
+
+.write_container figure img {
+  width: 60%;
+}
 /*Media queries for Grid*/
+
+/*Big phone oh boyyy*/
+
+@media screen and (min-width: 56rem ) {
+  .main_container {
+    display: grid;
+    align-items:stretch;
+    grid-template-areas:
+      "create ai ai schedule"
+      "create manage maintain schedule"
+      "write manage maintain schedule"
+      "write percent grow grow"
+    ;       
+    margin: 0 auto;
+    gap: 25px;
+  }
+
+  .main_container div {
+    margin: 0;
+  }
+
+  .main_container > :first-child {
+    margin-block-start: 0;
+  }
+
+  .ai_container {
+    grid-area: ai;
+  }
+
+  .manage_container {
+    grid-area: manage;
+    align-content:space-evenly;
+    overflow: clip;
+
+  }
+  .manage_container figure img {
+    margin-inline-end: -70px; 
+    width: 130%;
+    border-radius: 50px;
+  }
+
+  .maintain_container {
+    grid-area: maintain;
+    padding-inline: 1rem;
+    padding-block-start: 1rem;
+  }
+
+  .maintain_container img {
+    width: 100%;
+    margin-block-end: -100px;
+  }
+
+  .schedule_social_container {
+    grid-area: schedule;
+    padding: 0;
+    padding-block: 1rem;
+    padding-inline-start: 1rem;
+  }
+
+  .schedule_social_container figure {
+    overflow: hidden;
+  }
+  .schedule_social_container img {
+    width: 180%;
+    margin-inline-end: -170px;
+  }
+
+  .grow_container {
+    flex-direction: row;
+    grid-area: grow;
+  }
+
+  .grow_container p {
+    margin: 0;
+  }
+
+  .grow_container figure img {
+    width: 100%;
+  }
+
+  .percent_container {
+    grid-area: percent;
+  }
+  
+  .percent_container figure {
+    align-items: center;
+  }
+
+  .create_post_container {
+    grid-area: create;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .create_post_container figure {
+    margin-block-start: 2rem;
+    align-items: center;
+  }
+
+  .create_post_container figure img {
+    width: 80%;
+  }
+
+  .write_container {
+    grid-area: write;
+  }
+
+  .write_container figure {
+    margin-block-start: 2rem;
+  }
+
+  .write_container figure img {
+    width: 100%;
+  }
+  
+
+}

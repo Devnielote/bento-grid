@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/bento-grid-using-flex-and-grid-DoPPLwbATJ)
 - Live Site URL: [Live site URL](https://devnielote.github.io/bento-grid/)
 
 ## My process
@@ -41,4 +41,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@Devnielote](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@Devnielote](https://www.frontendmentor.io/profile/Devnielote)
